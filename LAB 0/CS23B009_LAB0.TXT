@@ -1,0 +1,41 @@
+PART 1:
+
+lw	t1,0(t0) changed t1
+lw	t2,0(t0) changed t2
+add	t3,t1,t2 changed t3
+
+register t3 is the final output as it reflects the sum of inputs(5+a=f)
+
+
+
+
+
+
+
+
+
+PART 2:
+
+Initial values of registers:
+a0: 0x0000000000000000  a1: 0x0000000000000000
+(all the registers have the value 0)
+
+How do the register values change during the arithmetic operation?
+
+before: a0: 0x0000000000000005  a1: 0x000000000000000a a2: 0x0000000000000000 
+a3: 0x0000000000000010  a4: 0x0000000000000005  a5: 0x000000000000000a
+
+after the operation: 
+a0: 0x0000000000000005  a1: 0x000000000000000a a2: 0x0000000000000000  
+a3: 0x0000000000000010  a4: 0x0000000000000005  a5: 0x000000000000000f
+
+a5 is the register that changed(from a5 to a4+a5)
+
+a4 and a5 were used to store intermediate results
+
+at the end of main function:
+
+a0: 0x000000000000000f  a1: 0x000000000000000a a2: 0x0000000000000000  
+a3: 0x0000000000000010  a4: 0x0000000000000005  a5: 0x000000000000000f
+
+a0 is having the value of output 

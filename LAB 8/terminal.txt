@@ -1,0 +1,93 @@
+(spike) until pc 0 800000e0
+(spike) reg 0 mcause
+0x000000000000000c
+(spike) reg 0 mtval
+0x0000000000002000
+(spike) 
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) 
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) 
+core   0: 0x00000000800000e8 (0x000083b1) c.srli  a5, 12
+(spike) 
+core   0: 0x00000000800000ea (0x1ff7f793) andi    a5, a5, 511
+(spike) 
+core   0: 0x00000000800000ee (0x00083537) lui     a0, 0x83
+(spike) 
+core   0: 0x00000000800000f2 (0x00002505) c.addiw a0, 1
+(spike) until pc 0 800000e0
+(spike) 
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) reg 0 mtval        
+0x0000000000003000
+(spike) reg 0 mcause       
+0x000000000000000d
+(spike) until pc 0 800000e0
+(spike) reg 0 mcause       
+0x000000000000000c
+(spike) reg 0 mtval        
+0x0000000000004000
+(spike) 
+(spike) 
+core   0: Executed 2 times
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) until pc 0 800000e0
+(spike) reg 0 mtval        
+0x0000000000005000
+(spike) reg 0 mcause       
+0x000000000000000d
+(spike) 
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) until pc 0 800000e0
+(spike) reg 0 mtval        
+0x0000000000006000
+(spike) reg 0 mcause       
+0x000000000000000c
+(spike) 
+(spike) 
+core   0: Executed 2 times
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) 
+core   0: 0x00000000800000e8 (0x000083b1) c.srli  a5, 12
+(spike) until pc 0 800000e0
+(spike) reg 0 mtval        
+0x0000000000007000
+(spike) reg 0 mcause       
+0x000000000000000d
+(spike)             
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) 
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) 
+core   0: 0x00000000800000e8 (0x000083b1) c.srli  a5, 12
+(spike) until pc 0 800000e0
+(spike) reg 0 mtval        
+0x0000000000008000
+(spike) reg 0 mcause       
+0x000000000000000c
+(spike) 
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) 
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) until pc 0 800000e0
+(spike) 
+core   0: >>>>  page_fault_handler
+core   0: 0x00000000800000e0 (0x343027f3) csrr    a5, mtval
+(spike) reg 0 mtval        
+0x0000000000009000
+(spike) reg 0 mcause       
+0x000000000000000d
+(spike) until pc 0 800000e0
+(spike) 
+(spike) 
+core   0: Executed 2 times
+core   0: 0x00000000800000e4 (0x342026f3) csrr    a3, mcause
+(spike) reg 0 mtval        
+0x000000000000a000
+(spike) reg 0 mcause       
+0x000000000000000c
